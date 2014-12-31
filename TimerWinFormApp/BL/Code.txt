@@ -1,4 +1,5 @@
-﻿String line;
+﻿===========================================================================================================
+String line;
 try 
 			{
 				//Pass the file path and file name to the StreamReader constructor
@@ -28,3 +29,10 @@ try
 			{
 				Console.WriteLine("Executing finally block.");
 			}
+===============================================================================================================
+// Create a file to write to. 
+string createText = "Hello and Welcome" + Environment.NewLine;
+File.WriteAllText(path, createText);
+
+// Open the file to read from. 
+string readText = File.ReadAllText(path);
