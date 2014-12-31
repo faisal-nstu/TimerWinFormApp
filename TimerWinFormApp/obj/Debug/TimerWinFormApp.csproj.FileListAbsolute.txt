@@ -1,0 +1,10 @@
+E:\Faisal\C#\TimerWinFormApp\TimerWinFormApp\bin\Debug\TimerWinFormApp.exe.config
+E:\Faisal\C#\TimerWinFormApp\TimerWinFormApp\obj\Debug\TimerWinFormApp.csprojResolveAssemblyReference.cache
+E:\Faisal\C#\TimerWinFormApp\TimerWinFormApp\obj\Debug\TimerWinFormApp.Properties.Resources.resources
+E:\Faisal\C#\TimerWinFormApp\TimerWinFormApp\obj\Debug\TimerWinFormApp.UI.MainForm.resources
+E:\Faisal\C#\TimerWinFormApp\TimerWinFormApp\obj\Debug\TimerWinFormApp.csproj.GenerateResource.Cache
+E:\Faisal\C#\TimerWinFormApp\TimerWinFormApp\bin\Debug\TimerWinFormApp.exe
+E:\Faisal\C#\TimerWinFormApp\TimerWinFormApp\bin\Debug\TimerWinFormApp.pdb
+E:\Faisal\C#\TimerWinFormApp\TimerWinFormApp\obj\Debug\TimerWinFormApp.exe
+E:\Faisal\C#\TimerWinFormApp\TimerWinFormApp\obj\Debug\TimerWinFormApp.pdb
+E:\Faisal\C#\TimerWinFormApp\TimerWinFormApp\obj\Debug\TimerWinFormApp.UI.AlertForm.resources
