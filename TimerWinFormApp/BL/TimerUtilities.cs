@@ -29,11 +29,11 @@ namespace TimerWinFormApp.BL
             return Convert.ToInt32(second) + (Convert.ToInt32(minute) * 60) + (Convert.ToInt32(hour) * 3600);
         }
 
-        public static void WriteTimeToFile(int time)
+        public static void WriteTimeToFile(string time)
         {
             try
             {
-                StreamWriter sw = new StreamWriter("d:\\time.t");
+                StreamWriter sw = new StreamWriter("c:\\ProgramData\\time.t");
                 sw.WriteLine(time);
                 sw.Close();
             }
@@ -45,8 +45,21 @@ namespace TimerWinFormApp.BL
 
         public static void StartTimer(string hour, string minute, string second)
         {
+            if (hour == "")
+            {
+                hour = "0";
+            }
+            if (minute == "")
+            {
+                minute = "0";
+            }
+            if (second == "")
+            {
+                second = "0";
+            }
             _time = GetTotalSeconds(hour, minute, second);
-            WriteTimeToFile(_time);
+            TimeSpan timeSpan = new TimeSpan(Convert.ToInt32(hour), Convert.ToInt32(minute), Convert.ToInt32(second));
+            WriteTimeToFile(timeSpan.ToString());
             TimeCounter();
         }
 

@@ -8,3 +8,4 @@ E:\Faisal\C#\TimerWinFormApp\TimerWinFormApp\bin\Debug\TimerWinFormApp.pdb
 E:\Faisal\C#\TimerWinFormApp\TimerWinFormApp\obj\Debug\TimerWinFormApp.exe
 E:\Faisal\C#\TimerWinFormApp\TimerWinFormApp\obj\Debug\TimerWinFormApp.pdb
 E:\Faisal\C#\TimerWinFormApp\TimerWinFormApp\obj\Debug\TimerWinFormApp.UI.AlertForm.resources
+E:\Faisal\C#\TimerWinFormApp\TimerWinFormApp\obj\Debug\TimerWinFormApp.UI.TimerHome.resources

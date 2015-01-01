@@ -53,6 +53,7 @@ namespace TimerWinFormApp.UI
         private void okButton_Click(object sender, EventArgs e)
         {
             TimerUtilities.StartTimer(hourTextBox.Text, minuteTextBox.Text, secondTextbox.Text);
+            this.Close();
         }
 
         
