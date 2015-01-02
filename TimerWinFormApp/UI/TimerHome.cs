@@ -15,18 +15,30 @@ namespace TimerWinFormApp.UI
         public TimerHome()
         {
             InitializeComponent();
+
         }
 
         private void addTimerButton_Click(object sender, EventArgs e)
         {
-            MainForm mainForm = new MainForm();
-            mainForm.ShowDialog();
-            ButtonDisable();
+            //MainForm mainForm = new MainForm();
+            //mainForm.ShowDialog();
+            //ButtonDisable();
+
         }
 
         private void ButtonDisable()
         {
             addTimerButton.Enabled = false;
+        }
+
+        private void startButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pauseButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
