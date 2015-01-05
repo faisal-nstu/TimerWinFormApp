@@ -73,6 +73,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="UI\AlertForm.resx">
       <DependentUpon>AlertForm.cs</DependentUpon>
@@ -98,6 +99,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="BL\Code.txt" />
+    <Content Include="Resources\clock-512.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
