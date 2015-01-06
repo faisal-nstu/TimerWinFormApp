@@ -157,6 +157,7 @@ namespace TimerWinFormApp.UI
         private void minimizeButton_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+            this.Hide();
             
         }
 
@@ -164,6 +165,7 @@ namespace TimerWinFormApp.UI
         {
             if (this.WindowState == FormWindowState.Minimized)
             {
+                this.Show();
                 this.WindowState = FormWindowState.Normal;
                 var desktopWorkingArea = System.Windows.Forms.Screen.PrimaryScreen.WorkingArea;
                 this.Left = desktopWorkingArea.Right - this.Width;
