@@ -35,9 +35,9 @@ namespace TimerWinFormApp.UI
             startButton.Enabled = false;
             pauseButton.Enabled = false;
             notifyIcon.Icon = Properties.Resources.clock_512;
-            notifyIcon.BalloonTipText = "My application still working...";
-            notifyIcon.BalloonTipTitle = "My Sample Application";
-            notifyIcon.BalloonTipIcon = ToolTipIcon.Info;
+            //notifyIcon.BalloonTipText = "My application still working...";
+            //notifyIcon.BalloonTipTitle = "My Sample Application";
+            //notifyIcon.BalloonTipIcon = ToolTipIcon.Info;
             notifyIcon.Visible = false;
         }
 
@@ -66,7 +66,6 @@ namespace TimerWinFormApp.UI
             if (this.WindowState == FormWindowState.Minimized)
             {
                 notifyIcon.Visible = true;
-                notifyIcon.ShowBalloonTip(3000);
                 this.ShowInTaskbar = false;
                 notifyIcon.MouseClick += NotifyIconOnMouseClick;
             }
@@ -119,23 +118,26 @@ namespace TimerWinFormApp.UI
         private void startButton_Click(object sender, EventArgs e)
         {
             addTimerButton.Text = "■";
-            if (_isRunning == false)
+            if (hourInputTextbox.Text == "" && minuteInputTextbox.Text == "" && secondInputTextbox.Text == "")
             {
-                if (hourInputTextbox.Text == "" && minuteInputTextbox.Text == "" && secondInputTextbox.Text == "")
-                {
-                    ResetTimerHome();
-                }
-                else
+                ResetTimerHome();
+                return;
+            }
+            else
+            {
+                if (_isRunning == false)
                 {
                     TimerUtilities.StartTimer(hourInputTextbox.Text, minuteInputTextbox.Text, secondInputTextbox.Text);
                     _isRunning = true;
                     TimerUtilities.Referene(this);
                 }
+                else
+                {
+                    TimerUtilities.RunTimer();
+                }
+                
             }
-            else
-            {
-                TimerUtilities.RunTimer();
-            }
+            
             startButton.Enabled = false;
             pauseButton.Enabled = true;
         }
@@ -178,6 +180,7 @@ namespace TimerWinFormApp.UI
             hourInputTextbox.Text = hour.ToString();
             minuteInputTextbox.Text = minute.ToString();
             secondInputTextbox.Text = second.ToString();
+            notifyIcon.Text = hour + ":" + minute + ":" + second + " left";
         }
     }
 }
