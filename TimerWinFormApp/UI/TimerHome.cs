@@ -121,9 +121,16 @@ namespace TimerWinFormApp.UI
             addTimerButton.Text = "■";
             if (_isRunning == false)
             {
-                TimerUtilities.StartTimer(hourInputTextbox.Text,minuteInputTextbox.Text,secondInputTextbox.Text);
-                _isRunning = true;
-                TimerUtilities.Referene(this);
+                if (hourInputTextbox.Text == "" && minuteInputTextbox.Text == "" && secondInputTextbox.Text == "")
+                {
+                    ResetTimerHome();
+                }
+                else
+                {
+                    TimerUtilities.StartTimer(hourInputTextbox.Text, minuteInputTextbox.Text, secondInputTextbox.Text);
+                    _isRunning = true;
+                    TimerUtilities.Referene(this);
+                }
             }
             else
             {

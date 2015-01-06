@@ -12,10 +12,10 @@ namespace TimerWinFormApp.BL
 {
     class TimerUtilities
     {
-        private static int _time;
         public static Timer timer;
         public static TimerHome _timerHome;
         private static TimeSpan timeSpan;
+        private static TimeSpan sec = new TimeSpan(0, 0, 1);
         public static int GetTotalSeconds(string hour, string minute, string second)
         {
             if (hour == String.Empty)
@@ -33,20 +33,6 @@ namespace TimerWinFormApp.BL
             return Convert.ToInt32(second) + (Convert.ToInt32(minute) * 60) + (Convert.ToInt32(hour) * 3600);
         }
 
-        public static void WriteTimeToFile(string time)
-        {
-            try
-            {
-                StreamWriter sw = new StreamWriter("c:\\ProgramData\\time.t");
-                sw.WriteLine(time);
-                sw.Close();
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show("Exception: " + e.Message);
-            }
-        }
-
         public static void StartTimer(string hour, string minute, string second)
         {
             if (hour == "")
@@ -61,9 +47,7 @@ namespace TimerWinFormApp.BL
             {
                 second = "0";
             }
-            _time = GetTotalSeconds(hour, minute, second);
             timeSpan = new TimeSpan(Convert.ToInt32(hour), Convert.ToInt32(minute), Convert.ToInt32(second));
-            WriteTimeToFile(timeSpan.ToString());
             TimeInitialize();
             RunTimer();
         }
@@ -93,11 +77,9 @@ namespace TimerWinFormApp.BL
         }
         private static void timer_tick(object sender, EventArgs e)
         {
-            TimeSpan sec = new TimeSpan(0,0,1);
-            _time--;
             timeSpan = timeSpan.Subtract(sec);
             _timerHome.UpdateTime(timeSpan.Hours,timeSpan.Minutes,timeSpan.Seconds);
-            if (_time == 0)
+            if (timeSpan.Hours == 0 && timeSpan.Minutes == 0 && timeSpan.Seconds == 0)
             {
                 AlertForm alert = new AlertForm();
                 alert.ShowDialog();
