@@ -34,7 +34,7 @@ namespace TimerWinFormApp.UI
 
         private void CloseButtonOnMouseHover(object sender, EventArgs eventArgs)
         {
-            (sender as Button).BackColor = Color.Gold;
+            (sender as Button).BackColor = Color.Yellow;
             (sender as Button).ForeColor = Color.OrangeRed;
         }
 

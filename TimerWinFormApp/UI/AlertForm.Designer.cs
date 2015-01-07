@@ -53,7 +53,7 @@
             this.timeUpLabel.AutoSize = true;
             this.timeUpLabel.BackColor = System.Drawing.Color.Transparent;
             this.timeUpLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.timeUpLabel.ForeColor = System.Drawing.Color.Gold;
+            this.timeUpLabel.ForeColor = System.Drawing.Color.Yellow;
             this.timeUpLabel.Location = new System.Drawing.Point(45, 101);
             this.timeUpLabel.Name = "timeUpLabel";
             this.timeUpLabel.Size = new System.Drawing.Size(97, 46);
