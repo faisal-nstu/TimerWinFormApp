@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TimerWinFormApp.BL;
 
 namespace TimerWinFormApp.UI
 {
@@ -17,13 +19,18 @@ namespace TimerWinFormApp.UI
             InitializeComponent();
             closeButton.MouseEnter += CloseButtonOnMouseHover;
             closeButton.MouseLeave += CloseButtonOnMouseLeave;
-            timeUpLabel.Text = "Time Up";
             this.Width = Screen.PrimaryScreen.Bounds.Width;
             int buttonOffset = (this.Width/2) - (closeButton.Width/2);
+            closeButton.Location = new System.Drawing.Point(buttonOffset, 206);
+            UpdateLabel();
             int timeUpLabelHorizontalOffset = (this.Width / 2) - (timeUpLabel.Width / 2);
             int timeUpLabelVerticalOffset = (this.Height / 2) - (timeUpLabel.Height / 2);
             timeUpLabel.Location = new System.Drawing.Point(timeUpLabelHorizontalOffset, timeUpLabelVerticalOffset);
-            closeButton.Location = new System.Drawing.Point(buttonOffset, 206);
+        }
+
+        private void UpdateLabel()
+        {
+             timeUpLabel.Text = TimerUtilities.ReadAlertMsgFromFile();
         }
 
         private void CloseButtonOnMouseLeave(object sender, EventArgs eventArgs)

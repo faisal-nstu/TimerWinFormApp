@@ -33,7 +33,7 @@ namespace TimerWinFormApp.BL
             return Convert.ToInt32(second) + (Convert.ToInt32(minute) * 60) + (Convert.ToInt32(hour) * 3600);
         }
 
-        public static void StartTimer(string hour, string minute, string second)
+        public static void StartTimer(string hour, string minute, string second, string msg)
         {
             if (hour == "")
             {
@@ -48,12 +48,13 @@ namespace TimerWinFormApp.BL
                 second = "0";
             }
             timeSpan = new TimeSpan(Convert.ToInt32(hour), Convert.ToInt32(minute), Convert.ToInt32(second));
-            TimeInitialize();
+            TimeInitialize(msg);
             RunTimer();
         }
 
-        private static void TimeInitialize()
+        private static void TimeInitialize(string msg)
         {
+            WriteTimeToFile(msg);
             timer = new Timer();
             timer.Interval = 1000;
             timer.Enabled = true;
@@ -87,9 +88,44 @@ namespace TimerWinFormApp.BL
             }
         }
 
-        public static void Referene(TimerHome form)
+        public static void RefToHome(TimerHome form)
         {
             _timerHome = form;
+        }
+
+        public static void WriteTimeToFile(string msg)
+        {
+            try
+            {
+                StreamWriter sw = new StreamWriter("c:\\ProgramData\\TimerAppData.t");
+                if (msg == "")
+                {
+                    msg = "Time Up!";
+                }
+                sw.WriteLine(msg);
+                sw.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Exception: " + e.Message);
+            }
+        }
+
+        public static string ReadAlertMsgFromFile()
+        {
+            String line = "";
+            try
+            {
+                StreamReader sr = new StreamReader("c:\\ProgramData\\TimerAppData.t");
+                line = sr.ReadLine();
+                sr.Close();
+                return line;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Exception: " + e.Message);
+            }
+            return line;
         }
     }
 }
