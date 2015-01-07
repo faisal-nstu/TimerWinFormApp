@@ -43,6 +43,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.alertMsgTextbox = new System.Windows.Forms.TextBox();
+            this.titlebarLogo = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.titlebarLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // addTimerButton
@@ -193,6 +195,7 @@
             // 
             // notifyIcon
             // 
+            this.notifyIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon.Icon")));
             this.notifyIcon.Text = "notifyIcon";
             this.notifyIcon.Visible = true;
             // 
@@ -210,11 +213,23 @@
             this.alertMsgTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.alertMsgTextbox.Visible = false;
             // 
+            // titlebarLogo
+            // 
+            this.titlebarLogo.Image = ((System.Drawing.Image)(resources.GetObject("titlebarLogo.Image")));
+            this.titlebarLogo.Location = new System.Drawing.Point(49, 1);
+            this.titlebarLogo.Name = "titlebarLogo";
+            this.titlebarLogo.Size = new System.Drawing.Size(20, 20);
+            this.titlebarLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.titlebarLogo.TabIndex = 9;
+            this.titlebarLogo.TabStop = false;
+            // 
             // TimerHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(238, 87);
+            this.Controls.Add(this.titlebarLogo);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.minimizeButton);
             this.Controls.Add(this.closeButton);
@@ -234,6 +249,7 @@
             this.Name = "TimerHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Timer";
+            ((System.ComponentModel.ISupportInitialize)(this.titlebarLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -254,5 +270,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.NotifyIcon notifyIcon;
         private System.Windows.Forms.TextBox alertMsgTextbox;
+        private System.Windows.Forms.PictureBox titlebarLogo;
     }
 }

@@ -36,7 +36,6 @@ namespace TimerWinFormApp.UI
             secondInputTextbox.LostFocus += CheckIfOverSixty;
             startButton.Enabled = false;
             pauseButton.Enabled = false;
-            notifyIcon.Icon = Properties.Resources.clock_512;
             //notifyIcon.BalloonTipText = "My application still working...";
             //notifyIcon.BalloonTipTitle = "My Sample Application";
             //notifyIcon.BalloonTipIcon = ToolTipIcon.Info;

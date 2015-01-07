@@ -59,15 +59,5 @@ namespace TimerWinFormApp.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
-        /// </summary>
-        internal static System.Drawing.Icon clock_512 {
-            get {
-                object obj = ResourceManager.GetObject("clock_512", resourceCulture);
-                return ((System.Drawing.Icon)(obj));
-            }
-        }
     }
 }
