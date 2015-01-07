@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="Timer.exe" version="1.0.0.3" publicKeyToken="03859eb110ddb804" language="neutral" processorArchitecture="msil" type="win32" />
+  <description asmv2:iconFile="clock-512.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="Timer" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="Timer.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the 
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward 
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Timer.exe" size="1131520">
+      <assemblyIdentity name="Timer" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>OE68tgHYx3zDX24dgWghKcQ8cY+jME8lTyazdefrt1Y=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="clock-512.ico" size="370070">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Tm6NThPan62/Uk7vJGXslkTbD/+C1mXqfhyE4xHd7Gg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\clock-512.ico" size="370070">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Tm6NThPan62/Uk7vJGXslkTbD/+C1mXqfhyE4xHd7Gg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Timer.exe.config" size="187">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>xm4bo26HQ0LNVwz1vdPYtzhkpMnp2AI5i+f0b+OahTI=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=BS-021\Faisal Amin" issuerKeyHash="59974895b172bdc73919543fca1534875103fc16" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>MiJqQo/j7ou2Im+FviLtlkEmS8kdpNME20sB9yT8KSs=</DigestValue></Reference></SignedInfo><SignatureValue>NdZBv8i/Ind24VfAgj8z/DwV09kh3VDpmMI6J3mrEGwNFDIPPgAPIUla7N81PlOwrs33Zoe8Dpxn77c3xQ1b/wYjj+a0kpidhihFOckTHpo4KX06LLIQWftUA3M+v8XvsFaGsPkZTEVGKBc9j7I1zZCYriNk0roaTNHVTfsq2dc=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>su1HVQgSh1AVwpdNoFrpGeiPdhg8+0ST29jJCqDhp/lLo+XsJqNAS+HcilJ7LhzcO3K3102QwChPvV1xvk4gXN+qeZHffSRri7tnhC79fRGdr84ioGHHL4hD4CKYTd1ztvfdIaoG5MQYEBCXojnt0M2TlZbUiL2DBX3gCXM60z8=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="2b29fc24f7014bdb04d3a41dc94b264196ed22be856f22b68beee38f426a2232" Description="" Url=""><as:assemblyIdentity name="Timer.exe" version="1.0.0.3" publicKeyToken="03859eb110ddb804" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=BS-021\Faisal Amin</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>9C+RL/zWn9o2Rvc3kjFKKiu0zDpKHbGW0DFi9kHR7W0=</DigestValue></Reference></SignedInfo><SignatureValue>g9oqaSQNWfthGYR9+Zr6CwG/uEsiZMQMInBLijnVTSSPQaOYKzZxLJoidXzAyDvPCicOUz+Zr4c2znUMN/DJNNxw4UR1gGCtYjJoRs9JEJ63aItccUTLRY5tqQlPjoKG8nI7Ya02z2/zIhc3d2yrEQCaZmrm8hNzUXaYFQV5sq4=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>su1HVQgSh1AVwpdNoFrpGeiPdhg8+0ST29jJCqDhp/lLo+XsJqNAS+HcilJ7LhzcO3K3102QwChPvV1xvk4gXN+qeZHffSRri7tnhC79fRGdr84ioGHHL4hD4CKYTd1ztvfdIaoG5MQYEBCXojnt0M2TlZbUiL2DBX3gCXM60z8=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB4TCCAUqgAwIBAgIQGzEtZTkpQr9LNcf/UH1phjANBgkqhkiG9w0BAQsFADAvMS0wKwYDVQQDHiQAQgBTAC0AMAAyADEAXABGAGEAaQBzAGEAbAAgAEEAbQBpAG4wHhcNMTUwMTA3MTAxNzQxWhcNMTYwMTA3MTYxNzQxWjAvMS0wKwYDVQQDHiQAQgBTAC0AMAAyADEAXABGAGEAaQBzAGEAbAAgAEEAbQBpAG4wgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBALLtR1UIEodQFcKXTaBa6Rnoj3YYPPtEk9vYyQqg4af5S6Pl7CajQEvh3IpSey4c3Dtyt9dNkMAoT71dcb5OIFzfqnmR330ka4u7Z4Qu/X0Rna/OIqBhxy+IQ+AimE3dc7b33SGqBuTEGBAQl6I57dDNk5WW1Ii9gwV94AlzOtM/AgMBAAEwDQYJKoZIhvcNAQELBQADgYEAQJsLadTWfYekkA8KsYkPrM+s7h08vD5/uKRYGO7vRcy3oLIO+4RB/h1Mlxy/+aWmDTlJI5YMrnBkDsrna/XrfLdeIm1J9JNXPKBMI1Aibh3cLY+pAxrSd8HqrOnqZgveTuSJjJ1Ef9rBVWkGTF3xCJ6eUEEu2v34uq1zpz7Ktg0=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
