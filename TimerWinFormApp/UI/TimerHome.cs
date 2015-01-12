@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using TimerWinFormApp.BL;
 
@@ -13,6 +14,15 @@ namespace TimerWinFormApp.UI
         private bool _isRunning;
         private bool _formInitForInput;
         private bool _addClicked;
+
+        // move with label
+        public const int WM_NCLBUTTONDOWN = 0xA1;
+        //public const int HTCAPTION = 0x2;
+        [DllImport("User32.dll")]
+        public static extern bool ReleaseCapture();
+        [DllImport("User32.dll")]
+        public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
+
         
         public TimerHome()
         {
@@ -42,9 +52,22 @@ namespace TimerWinFormApp.UI
             //notifyIcon.BalloonTipTitle = "My Sample Application";
             //notifyIcon.BalloonTipIcon = ToolTipIcon.Info;
             notifyIcon.Visible = false;
+            label3.MouseDown += MoveOnMouseDown;
+            colonLabel1.MouseDown += MoveOnMouseDown;
+            colonLabel2.MouseDown += MoveOnMouseDown;
+            titlebarLogo.MouseDown += MoveOnMouseDown;
         }
 
-#region Button Activities
+        private void MoveOnMouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                ReleaseCapture();
+                SendMessage(Handle, WM_NCLBUTTONDOWN, HTCAPTION, 0);
+            }
+        }
+
+        #region Button Activities
         private void addTimerButton_Click(object sender, EventArgs e)
         {
             if (hourInputTextbox.Text == "" && minuteInputTextbox.Text == "" && secondInputTextbox.Text == "" && _addClicked == true)

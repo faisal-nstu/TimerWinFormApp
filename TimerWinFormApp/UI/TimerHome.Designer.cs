@@ -187,7 +187,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Courier New", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DimGray;
-            this.label3.Location = new System.Drawing.Point(70, 0);
+            this.label3.Location = new System.Drawing.Point(70, 1);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(65, 22);
             this.label3.TabIndex = 4;
