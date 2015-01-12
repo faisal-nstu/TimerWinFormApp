@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Media;
 using System.Windows.Forms;
 using TimerWinFormApp.BL;
 
@@ -7,6 +8,8 @@ namespace TimerWinFormApp.UI
 {
     public partial class AlertForm : Form
     {
+        //E:\Faisal\songs\[eNgLiSh]\Blind Guardian - Road Of No Release.mp3
+        SoundPlayer alertSound = new SoundPlayer(@"c:\Windows\Media\Alarm10.wav");
         public AlertForm()
         {
             InitializeComponent();
@@ -19,6 +22,7 @@ namespace TimerWinFormApp.UI
             int timeUpLabelHorizontalOffset = (this.Width / 2) - (timeUpLabel.Width / 2);
             int timeUpLabelVerticalOffset = (this.Height / 2) - (timeUpLabel.Height / 2);
             timeUpLabel.Location = new System.Drawing.Point(timeUpLabelHorizontalOffset, timeUpLabelVerticalOffset);
+            alertSound.PlayLooping();
         }
 
         private void UpdateLabel()
@@ -40,6 +44,7 @@ namespace TimerWinFormApp.UI
 
         private void closeButton_Click(object sender, EventArgs e)
         {
+            alertSound.Stop();
             Application.Exit();
         }
     }
