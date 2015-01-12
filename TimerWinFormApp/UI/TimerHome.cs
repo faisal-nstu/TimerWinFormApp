@@ -12,12 +12,14 @@ namespace TimerWinFormApp.UI
         private const int HTCAPTION = 0x2;
         private bool _isRunning;
         private bool _formInitForInput;
-        //33,125,92
+        private bool _addClicked;
+        
         public TimerHome()
         {
             InitializeComponent();
             _isRunning = false;
             _formInitForInput = false;
+            _addClicked = false;
             this.Resize += OnResize;
             alertMsgTextbox.ReadOnly = true;
             alertMsgTextbox.Hide();
@@ -45,19 +47,29 @@ namespace TimerWinFormApp.UI
 #region Button Activities
         private void addTimerButton_Click(object sender, EventArgs e)
         {
-            if (_isRunning == false)
+            if (hourInputTextbox.Text == "" && minuteInputTextbox.Text == "" && secondInputTextbox.Text == "" && _addClicked == true)
             {
-                InitializeFormForTimer();
-            }
-            if (_isRunning == true)
-            {
-                TimerUtilities.StopTimer();
                 ResetTimerHome();
-                _isRunning = false;
+                _addClicked = false;
+            }
+            else
+            {
+                this.addTimerButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                addTimerButton.Text = "X";
+                if (_isRunning == false && _addClicked == false)
+                {
+                    _addClicked = true;
+                    InitializeFormForTimer();
+                }
+                if (_isRunning == true)
+                {
+                    TimerUtilities.StopTimer();
+                    ResetTimerHome();
+                    _isRunning = false;
+                }
             }
         }
 
-        
         private void startButton_Click(object sender, EventArgs e)
         {
             if (hourInputTextbox.Text == "" && minuteInputTextbox.Text == "" && secondInputTextbox.Text == "")
@@ -206,6 +218,7 @@ namespace TimerWinFormApp.UI
             addTimerButton.Text = "+";
             startButton.Enabled = false;
             pauseButton.Enabled = false;
+            this.addTimerButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 
             //CHANGE BACK TO INITIAL STATE
             if (_formInitForInput == true)
