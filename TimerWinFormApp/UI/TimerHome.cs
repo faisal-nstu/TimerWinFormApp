@@ -58,14 +58,7 @@ namespace TimerWinFormApp.UI
             titlebarLogo.MouseDown += MoveOnMouseDown;
         }
 
-        private void MoveOnMouseDown(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Left)
-            {
-                ReleaseCapture();
-                SendMessage(Handle, WM_NCLBUTTONDOWN, HTCAPTION, 0);
-            }
-        }
+        
 
         #region Button Activities
         private void addTimerButton_Click(object sender, EventArgs e)
@@ -169,22 +162,30 @@ namespace TimerWinFormApp.UI
                     if ((int)m.Result == HTCLIENT)
                         m.Result = (IntPtr)HTCAPTION;
                     return;
-                    break;
             }
             base.WndProc(ref m);
+        }
+
+        private void MoveOnMouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                ReleaseCapture();
+                SendMessage(Handle, WM_NCLBUTTONDOWN, HTCAPTION, 0);
+            }
         }
 
         private void InitializeFormForTimer()
         {
             if (_formInitForInput == false)
             {
-                for (int i = 0; i < 92; i++)
+                for (int i = 0; i < 92; i+=2)
                 {
-                    this.Height++;
+                    this.Height+=2;
                     alertMsgTextbox.ReadOnly = false;
-                    addTimerButton.Location = new Point(addTimerButton.Location.X, addTimerButton.Location.Y + 1);
-                    startButton.Location = new Point(startButton.Location.X, startButton.Location.Y + 1);
-                    pauseButton.Location = new Point(pauseButton.Location.X, pauseButton.Location.Y + 1);
+                    addTimerButton.Location = new Point(addTimerButton.Location.X, addTimerButton.Location.Y + 2);
+                    startButton.Location = new Point(startButton.Location.X, startButton.Location.Y + 2);
+                    pauseButton.Location = new Point(pauseButton.Location.X, pauseButton.Location.Y + 2);
                 }
                 alertMsgTextbox.Show();
                 hourInputTextbox.Show();
@@ -246,12 +247,12 @@ namespace TimerWinFormApp.UI
             //CHANGE BACK TO INITIAL STATE
             if (_formInitForInput == true)
             {
-                for (int i = 0; i < 92; i++)
+                for (int i = 0; i < 92; i+=2)
                 {
-                    this.Height--;
-                    addTimerButton.Location = new Point(addTimerButton.Location.X, addTimerButton.Location.Y - 1);
-                    startButton.Location = new Point(startButton.Location.X, startButton.Location.Y - 1);
-                    pauseButton.Location = new Point(pauseButton.Location.X, pauseButton.Location.Y - 1);
+                    this.Height-=2;
+                    addTimerButton.Location = new Point(addTimerButton.Location.X, addTimerButton.Location.Y - 2);
+                    startButton.Location = new Point(startButton.Location.X, startButton.Location.Y - 2);
+                    pauseButton.Location = new Point(pauseButton.Location.X, pauseButton.Location.Y - 2);
                 }
                 alertMsgTextbox.Hide();
                 hourInputTextbox.Hide();
