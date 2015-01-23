@@ -63,12 +63,12 @@
             // 
             this.hourInputTextbox.BackColor = System.Drawing.Color.Gainsboro;
             this.hourInputTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.hourInputTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hourInputTextbox.Font = new System.Drawing.Font("Digital-7", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hourInputTextbox.ForeColor = System.Drawing.Color.DimGray;
             this.hourInputTextbox.Location = new System.Drawing.Point(12, 79);
             this.hourInputTextbox.MinimumSize = new System.Drawing.Size(0, 40);
             this.hourInputTextbox.Name = "hourInputTextbox";
-            this.hourInputTextbox.Size = new System.Drawing.Size(60, 38);
+            this.hourInputTextbox.Size = new System.Drawing.Size(60, 40);
             this.hourInputTextbox.TabIndex = 1;
             this.hourInputTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -76,12 +76,12 @@
             // 
             this.minuteInputTextbox.BackColor = System.Drawing.Color.Gainsboro;
             this.minuteInputTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.minuteInputTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.minuteInputTextbox.Font = new System.Drawing.Font("Digital-7", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.minuteInputTextbox.ForeColor = System.Drawing.Color.DimGray;
             this.minuteInputTextbox.Location = new System.Drawing.Point(89, 79);
             this.minuteInputTextbox.MinimumSize = new System.Drawing.Size(0, 40);
             this.minuteInputTextbox.Name = "minuteInputTextbox";
-            this.minuteInputTextbox.Size = new System.Drawing.Size(60, 38);
+            this.minuteInputTextbox.Size = new System.Drawing.Size(60, 40);
             this.minuteInputTextbox.TabIndex = 2;
             this.minuteInputTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -89,12 +89,12 @@
             // 
             this.secondInputTextbox.BackColor = System.Drawing.Color.Gainsboro;
             this.secondInputTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.secondInputTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.secondInputTextbox.Font = new System.Drawing.Font("Digital-7", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.secondInputTextbox.ForeColor = System.Drawing.Color.DimGray;
             this.secondInputTextbox.Location = new System.Drawing.Point(166, 79);
             this.secondInputTextbox.MinimumSize = new System.Drawing.Size(0, 40);
             this.secondInputTextbox.Name = "secondInputTextbox";
-            this.secondInputTextbox.Size = new System.Drawing.Size(60, 38);
+            this.secondInputTextbox.Size = new System.Drawing.Size(60, 40);
             this.secondInputTextbox.TabIndex = 3;
             this.secondInputTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
