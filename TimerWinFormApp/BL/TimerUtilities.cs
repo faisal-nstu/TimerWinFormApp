@@ -77,10 +77,16 @@ namespace TimerWinFormApp.BL
             _timerHome.UpdateTime(timeSpan.Hours,timeSpan.Minutes,timeSpan.Seconds);
             if (timeSpan.Hours == 0 && timeSpan.Minutes == 0 && timeSpan.Seconds == 0)
             {
-                AlertForm alert = new AlertForm();
+                var alert = new AlertForm();
                 alert.ShowDialog();
                 timer.Stop();
             }
+        }
+
+        public static void ResetTimerHome()
+        {
+            _timerHome.UpdateTime(0,0,0);
+            _timerHome.ResetLabel();
         }
 
         public static void RefToHome(TimerHome form)

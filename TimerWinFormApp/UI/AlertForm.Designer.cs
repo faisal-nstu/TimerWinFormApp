@@ -30,6 +30,7 @@
         {
             this.closeButton = new System.Windows.Forms.Button();
             this.timeUpLabel = new System.Windows.Forms.Label();
+            this.newButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // closeButton
@@ -60,12 +61,29 @@
             this.timeUpLabel.TabIndex = 1;
             this.timeUpLabel.Text = "alert";
             // 
+            // newButton
+            // 
+            this.newButton.BackColor = System.Drawing.Color.Transparent;
+            this.newButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.newButton.FlatAppearance.BorderSize = 0;
+            this.newButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.newButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newButton.ForeColor = System.Drawing.Color.Black;
+            this.newButton.Location = new System.Drawing.Point(5, 206);
+            this.newButton.Name = "newButton";
+            this.newButton.Size = new System.Drawing.Size(85, 23);
+            this.newButton.TabIndex = 2;
+            this.newButton.Text = "NEW";
+            this.newButton.UseVisualStyleBackColor = false;
+            this.newButton.Click += new System.EventHandler(this.newButton_Click);
+            // 
             // AlertForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.OrangeRed;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.newButton);
             this.Controls.Add(this.timeUpLabel);
             this.Controls.Add(this.closeButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -83,5 +101,6 @@
 
         private System.Windows.Forms.Button closeButton;
         private System.Windows.Forms.Label timeUpLabel;
+        private System.Windows.Forms.Button newButton;
     }
 }

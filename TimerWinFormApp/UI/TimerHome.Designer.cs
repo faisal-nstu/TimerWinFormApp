@@ -68,8 +68,8 @@
             this.hourInputTextbox.Location = new System.Drawing.Point(12, 79);
             this.hourInputTextbox.MinimumSize = new System.Drawing.Size(0, 40);
             this.hourInputTextbox.Name = "hourInputTextbox";
-            this.hourInputTextbox.Size = new System.Drawing.Size(60, 40);
-            this.hourInputTextbox.TabIndex = 1;
+            this.hourInputTextbox.Size = new System.Drawing.Size(60, 33);
+            this.hourInputTextbox.TabIndex = 2;
             this.hourInputTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // minuteInputTextbox
@@ -81,8 +81,8 @@
             this.minuteInputTextbox.Location = new System.Drawing.Point(89, 79);
             this.minuteInputTextbox.MinimumSize = new System.Drawing.Size(0, 40);
             this.minuteInputTextbox.Name = "minuteInputTextbox";
-            this.minuteInputTextbox.Size = new System.Drawing.Size(60, 40);
-            this.minuteInputTextbox.TabIndex = 2;
+            this.minuteInputTextbox.Size = new System.Drawing.Size(60, 33);
+            this.minuteInputTextbox.TabIndex = 3;
             this.minuteInputTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // secondInputTextbox
@@ -94,8 +94,8 @@
             this.secondInputTextbox.Location = new System.Drawing.Point(166, 79);
             this.secondInputTextbox.MinimumSize = new System.Drawing.Size(0, 40);
             this.secondInputTextbox.Name = "secondInputTextbox";
-            this.secondInputTextbox.Size = new System.Drawing.Size(60, 40);
-            this.secondInputTextbox.TabIndex = 3;
+            this.secondInputTextbox.Size = new System.Drawing.Size(60, 33);
+            this.secondInputTextbox.TabIndex = 4;
             this.secondInputTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // colonLabel1
@@ -209,7 +209,7 @@
             this.alertMsgTextbox.MinimumSize = new System.Drawing.Size(0, 40);
             this.alertMsgTextbox.Name = "alertMsgTextbox";
             this.alertMsgTextbox.Size = new System.Drawing.Size(214, 38);
-            this.alertMsgTextbox.TabIndex = 4;
+            this.alertMsgTextbox.TabIndex = 1;
             this.alertMsgTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.alertMsgTextbox.Visible = false;
             // 

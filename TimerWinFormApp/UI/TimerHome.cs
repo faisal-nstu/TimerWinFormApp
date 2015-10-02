@@ -272,6 +272,12 @@ namespace TimerWinFormApp.UI
             secondInputTextbox.Text = second.ToString();
             notifyIcon.Text = hour + ":" + minute + ":" + second + " left";
         }
-#endregion
+
+        public void ResetLabel()
+        {
+           ResetTimerHome();
+        }
+
+        #endregion
     }
 }
